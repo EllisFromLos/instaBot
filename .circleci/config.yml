@@ -3,7 +3,7 @@ version: 2.0
 jobs:
   "trigger":
     docker:
-      - image: funkypenguin/instapy
+      - image: instapy/instapy
     working_directory: ~/instaBot
     steps:
       - checkout
