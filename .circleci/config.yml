@@ -11,7 +11,7 @@ jobs:
       - run:
           name: "Run Bot"
           command: |
-            python3 instabot.py
+            python3 ./instabot.py
       - run:
           name: "End"
           command: |
