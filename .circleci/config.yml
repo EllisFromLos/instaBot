@@ -13,6 +13,10 @@ jobs:
           command: |
             pwd
       - run:
+          name: "Test2"
+          command: |
+            ls -la
+      - run:
           name: "Run Bot"
           command: |
             python3 ./instabot.py
