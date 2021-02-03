@@ -8,14 +8,17 @@ jobs:
     working_directory: ~/instaBot
     steps:
       - checkout
-      - run:
-          name: "Test"
-          command: |
-            pwd
-      - run:
-          name: "Test2"
-          command: |
-            ls -la
+      - run: sudo apt-get update
+      - run: sudo apt-get -y upgrade
+      - run: sudo apt-get -y install unzip python3-pip python3-dev build-essential libssl-dev libffi-dev xvfb
+      - run: sudo pip3 install --upgrade pip
+      - run: export LANGUAGE=en_US.UTF-8
+      - run: export LANG=en_US.UTF-8
+      - run: export LC_ALL=en_US.UTF-8
+      - run: locale-gen en_US.UTF-8
+      - run: sudo dpkg-reconfigure locales
+      - run: pip3 install --upgrade pip
+
       - run:
           name: "Run Bot"
           command: |
