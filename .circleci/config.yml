@@ -12,7 +12,7 @@ jobs:
       - run: apt-get install -y sudo # https://discuss.circleci.com/t/sudo-command-not-found/14208/4
       - run: ls -al /bin/sh && sudo rm /bin/sh && sudo ln -s /bin/bash /bin/sh && ls -al /bin/sh
       
-      - run: sudo apt-get update
+      - run: sudo apt-get update --fix-missing
       - run: sudo apt-get -y upgrade
       - run: sudo apt-get -y install unzip python3-pip python3-dev build-essential libssl-dev libffi-dev xvfb
       - run: sudo pip3 install --upgrade pip
