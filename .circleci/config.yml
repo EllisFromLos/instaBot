@@ -11,7 +11,7 @@ jobs:
       - run:
           name: "Run Bot"
           command: |
-            echo
+            echo ""
 workflows:
   version: 2
   build:
