@@ -11,7 +11,8 @@ jobs:
       - run:
           name: "Run Bot"
           command: |
-            echo ""
+            python3 instabot.py
+
 workflows:
   version: 2
   build:
