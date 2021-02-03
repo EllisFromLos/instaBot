@@ -9,6 +9,10 @@ jobs:
     steps:
       - checkout
       - run:
+          name: "Test"
+          command: |
+            pwd
+      - run:
           name: "Run Bot"
           command: |
             python3 ./instabot.py
