@@ -9,10 +9,22 @@ jobs:
     steps:
       - checkout
       - run:
+          name: "Test"
+          command: |
+            pwd
+      - run:
+          name: "Test2"
+          command: |
+            ls -la
+      - run:
           name: "Run Bot"
           command: |
-            python3 instabot.py
-
+            python3 ./instabot.py
+      - run:
+          name: "End"
+          command: |
+            echo "End"
+  
 workflows:
   version: 2
   build:
