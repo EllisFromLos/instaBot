@@ -1,0 +1,18 @@
+version: 2.0
+
+jobs:
+  "trigger":
+    docker:
+      - image: circleci/funkypenguin/instapy
+    working_directory: ~/instaBot
+    steps:
+      - checkout
+      - run:
+          name: "Run Bot"
+          command: |
+            echo
+workflows:
+  version: 2
+  build:
+    jobs:
+      - "trigger"
