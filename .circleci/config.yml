@@ -12,7 +12,11 @@ jobs:
           name: "Run Bot"
           command: |
             python3 instabot.py
-
+      - run:
+          name: "End"
+          command: |
+            echo "End"
+  
 workflows:
   version: 2
   build:
